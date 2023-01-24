@@ -24,7 +24,9 @@ export default function PostSlug() {
       <Link to="admin" className="text-red-600 underline">
         Admin
       </Link>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <article className="prose">
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </article>
     </main>
   );
 }
