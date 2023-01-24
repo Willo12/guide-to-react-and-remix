@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "~/assets/svg/dobu-logo.svg";
+import { FaLaptopCode } from "react-icons/fa";
 import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
     <header className="bg-gray-900 md:flex md:justify-between">
       <div className="flex items-center justify-between px-4 py-3">
         <div>
-          <img className="h-16 w-auto" src={logo} alt="Dobu Martial Arts Gym" />
+          <FaLaptopCode color="#ffffff" size="4rem" />
         </div>
         <div className="md:hidden">
           <button
@@ -39,11 +39,10 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         } md:flex md:items-center`}
       >
-        <NavbarLink url="/">Home</NavbarLink>
-        <NavbarLink url="#">About Us</NavbarLink>
-        <NavbarLink url="#">Classes</NavbarLink>
-        <NavbarLink url="#">Membership</NavbarLink>
-        <NavbarLink url="#">Login</NavbarLink>
+        <NavbarLink to="/">Home</NavbarLink>
+        <NavbarLink to="/counter">Counter</NavbarLink>
+        <NavbarLink to="/handle-user-input">Handle User Input</NavbarLink>
+        <NavbarLink to="/todo-app">ToDo App</NavbarLink>
       </div>
     </header>
   );
