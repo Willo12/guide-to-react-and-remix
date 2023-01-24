@@ -1,180 +1,87 @@
-# Remix Indie Stack
+# Beginner React Challenges
 
-![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+## Available Scripts
 
-Learn more about [Remix Stacks](https://remix.run/stacks).
+In the project directory, you can run:
 
-```
-npx create-remix@latest --template remix-run/indie-stack
-```
+### `npm run dev`
 
-## What's in the stack
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Fly app deployment](https://fly.io) with [Docker](https://www.docker.com/)
-- Production-ready [SQLite Database](https://sqlite.org)
-- Healthcheck endpoint for [Fly backups region fallbacks](https://fly.io/docs/reference/configuration/#services-http_checks)
-- [GitHub Actions](https://github.com/features/actions) for deploy on merge to production and staging environments
-- Email/Password Authentication with [cookie-based sessions](https://remix.run/docs/en/v1/api/remix#createcookiesessionstorage)
-- Database ORM with [Prisma](https://prisma.io)
-- Styling with [Tailwind](https://tailwindcss.com/)
-- End-to-end testing with [Cypress](https://cypress.io)
-- Local third party request mocking with [MSW](https://mswjs.io)
-- Unit testing with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com)
-- Code formatting with [Prettier](https://prettier.io)
-- Linting with [ESLint](https://eslint.org)
-- Static Types with [TypeScript](https://typescriptlang.org)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Not a fan of bits of the stack? Fork it, change it, and use `npx create-remix --template your/repo`! Make it your own.
+## What is it?
 
-## Quickstart
+This is a project for beginners who are learning React and Tailwind CSS.
 
-Click this button to create a [Gitpod](https://gitpod.io) workspace with the project set up and Fly pre-installed
+Each branch of the project contains a different challenge:
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/remix-run/indie-stack/tree/main)
+1. Counter
+2. Handling form input
+3. ToDo app
 
-## Development
+You can switch between branches easily using the command-line, or an application like (GitHub Desktop)[https://desktop.github.com/].
 
-- This step only applies if you've opted out of having the CLI install dependencies for you:
+## Getting Started with Create React App and Tailwind CSS
 
-  ```sh
-  npx remix init
-  ```
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Initial setup: _If you just generated this project, this step has been done for you._
+It also comes with a basic [Tailwind CSS](https://tailwindcss.com/) installation.
 
-  ```sh
-  npm run setup
-  ```
+## The challenges
 
-- Start dev server:
+### 1. Counter
 
-  ```sh
-  npm run dev
-  ```
+Can you update the component code so that clicking the 'Add' button makes the number on screen increment by one every time?
 
-This starts your app in development mode, rebuilding assets on file changes.
+**HINT**: you can use the (useState)[https://beta.reactjs.org/reference/react/useState#reference] hook to solve this. Look at a usage example (here)[https://beta.reactjs.org/reference/react/useState#usage].
 
-The database seed script creates a new user with some data you can use to get started:
+If you are REALLY stuck, take a look at a counter example from the React docs page (here)[https://beta.reactjs.org/reference/react/useState#examples-basic].
 
-- Email: `rachel@remix.run`
-- Password: `racheliscool`
+### 2. Handling User Input
 
-### Relevant code:
+1. Update the code so that when the user types into the input field, their writing will replace the three question marks in the green box below.
 
-This is a pretty simple note-taking app, but it's a good example of how you can build a full stack app with Prisma and Remix. The main functionality is creating users, logging in and out, and creating and deleting notes.
+2. When the user clicks the 'Clear Text' button, the text in the input box and the 'You typed:' area should clear.
 
-- creating users, and logging in and out [./app/models/user.server.ts](./app/models/user.server.ts)
-- user sessions, and verifying them [./app/session.server.ts](./app/session.server.ts)
-- creating, and deleting notes [./app/models/note.server.ts](./app/models/note.server.ts)
+So the finished behaviour will look like this...
 
-## Deployment
+![Finished input handling challenge](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674377447/react-introduction/2023-01-22_08-48-42_1_uxd5wg.gif)
 
-This Remix Stack comes with two GitHub Actions that handle automatically deploying your app to production and staging environments.
+**HINT**: Take a look at the text field example (second tab along) from the React docs page (here)[https://beta.reactjs.org/reference/react/useState#examples-basic].
 
-Prior to your first deployment, you'll need to do a few things:
+#### **EXTRA CREDIT 1 (optional)**
 
-- [Install Fly](https://fly.io/docs/getting-started/installing-flyctl/)
+If the input box is empty, can you give it a red background-colour and print a message beneath reading 'This field is required', like that shown below?
 
-- Sign up and log in to Fly
+![Extra credit 1 finished example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674378802/react-introduction/2023-01-22_09-11-57_1_b78mv3.gif)
 
-  ```sh
-  fly auth signup
-  ```
+#### **EXTRA CREDIT 2 (optional)**
 
-  > **Note:** If you have more than one Fly account, ensure that you are signed into the same account in the Fly CLI as you are in the browser. In your terminal, run `fly auth whoami` and ensure the email matches the Fly account signed into the browser.
+Hmmm. Now, the input field is already styled red with a warning when the component first renders and before the user has even typed anything.
 
-- Create two apps on Fly, one for staging and one for production:
+Can you use the [usePrevious custom hook](https://usehooks.com/usePrevious/) to only make the warning styles show _AFTER_ the user has typed into the input field and then cleared it? See the example below:
 
-  ```sh
-  fly apps create guide-to-react-and-remix-27a7
-  fly apps create guide-to-react-and-remix-27a7-staging
-  ```
+![Extra credit 2 finished example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674377447/react-introduction/2023-01-22_08-48-42_1_uxd5wg.gif)
 
-  > **Note:** Make sure this name matches the `app` set in your `fly.toml` file. Otherwise, you will not be able to deploy.
+### 3. ToDo List Challenge
 
-  - Initialize Git.
+This will bring all of your knowledge together. Create a ToDo list app that will allow the user to:
 
-  ```sh
-  git init
-  ```
+1. Create a ToDo
+2. Delete a ToDo
+3. Extension (optional): Edit a Todo
 
-- Create a new [GitHub Repository](https://repo.new), and then add it as the remote for your project. **Do not push your app yet!**
+Take a look at the example below to get an idea of what it might look like, but don't feel like you have to copy it exactly. Make it your own!
 
-  ```sh
-  git remote add origin <ORIGIN_URL>
-  ```
+![Finish ToDo app example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674474087/react-introduction/2023-01-23_11-37-47_1_n7lt3y.gif)
 
-- Add a `FLY_API_TOKEN` to your GitHub repo. To do this, go to your user settings on Fly and create a new [token](https://web.fly.io/user/personal_access_tokens/new), then add it to [your repo secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) with the name `FLY_API_TOKEN`.
+## Learn More
 
-- Add a `SESSION_SECRET` to your fly app secrets, to do this you can run the following commands:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-  ```sh
-  fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app guide-to-react-and-remix-27a7
-  fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app guide-to-react-and-remix-27a7-staging
-  ```
+To learn React, check out the [React documentation](https://beta.reactjs.org/).
 
-  If you don't have openssl installed, you can also use [1password](https://1password.com/password-generator/) to generate a random secret, just replace `$(openssl rand -hex 32)` with the generated secret.
-
-- Create a persistent volume for the sqlite database for both your staging and production environments. Run the following:
-
-  ```sh
-  fly volumes create data --size 1 --app guide-to-react-and-remix-27a7
-  fly volumes create data --size 1 --app guide-to-react-and-remix-27a7-staging
-  ```
-
-Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
-
-### Connecting to your database
-
-The sqlite database lives at `/data/sqlite.db` in your deployed application. You can connect to the live database by running `fly ssh console -C database-cli`.
-
-### Getting Help with Deployment
-
-If you run into any issues deploying to Fly, make sure you've followed all of the steps above and if you have, then post as many details about your deployment (including your app name) to [the Fly support community](https://community.fly.io). They're normally pretty responsive over there and hopefully can help resolve any of your deployment issues and questions.
-
-## GitHub Actions
-
-We use GitHub Actions for continuous integration and deployment. Anything that gets into the `main` branch will be deployed to production after running tests/build/etc. Anything in the `dev` branch will be deployed to staging.
-
-## Testing
-
-### Cypress
-
-We use Cypress for our End-to-End tests in this project. You'll find those in the `cypress` directory. As you make changes, add to an existing file or create a new file in the `cypress/e2e` directory to test your changes.
-
-We use [`@testing-library/cypress`](https://testing-library.com/cypress) for selecting elements on the page semantically.
-
-To run these tests in development, run `npm run test:e2e:dev` which will start the dev server for the app as well as the Cypress client. Make sure the database is running in docker as described above.
-
-We have a utility for testing authenticated features without having to go through the login flow:
-
-```ts
-cy.login();
-// you are now logged in as a new user
-```
-
-We also have a utility to auto-delete the user at the end of your test. Just make sure to add this in each test file:
-
-```ts
-afterEach(() => {
-  cy.cleanupUser();
-});
-```
-
-That way, we can keep your local db clean and keep your tests isolated from one another.
-
-### Vitest
-
-For lower level tests of utilities and individual components, we use `vitest`. We have DOM-specific assertion helpers via [`@testing-library/jest-dom`](https://testing-library.com/jest-dom).
-
-### Type Checking
-
-This project uses TypeScript. It's recommended to get TypeScript set up for your editor to get a really great in-editor experience with type checking and auto-complete. To run type checking across the whole project, run `npm run typecheck`.
-
-### Linting
-
-This project uses ESLint for linting. That is configured in `.eslintrc.js`.
-
-### Formatting
-
-We use [Prettier](https://prettier.io/) for auto-formatting in this project. It's recommended to install an editor plugin (like the [VSCode Prettier plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)) to get auto-formatting on save. There's also a `npm run format` script you can run to format all files in the project.
+For Tailwind, visit their [documentation page](https://tailwindcss.com/docs/installation).
