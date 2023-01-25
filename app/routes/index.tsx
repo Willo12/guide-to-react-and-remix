@@ -12,7 +12,7 @@ export default function Index() {
           Select a Challenge
         </h1>
       </div>
-      <div className="flex w-full">
+      <div className="w-full p-8 md:flex">
         <ChallengeLink to="/counter">
           <div className="flex flex-col items-center justify-center">
             <FaCalculator className="my-8" color="#ffffff" size="12rem" />
