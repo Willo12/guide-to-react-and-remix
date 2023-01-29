@@ -1,10 +1,13 @@
 interface ParagraphProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Paragraph = ({ children }: ParagraphProps) => {
+const Paragraph = ({ children, className = "" }: ParagraphProps) => {
   return (
-    <p className="tracking-wide text-gray-600 text-2xl mb-6">{children}</p>
+    <p className={`mb-6 text-2xl tracking-wide text-gray-600 ${className}`}>
+      {children}
+    </p>
   );
 };
 

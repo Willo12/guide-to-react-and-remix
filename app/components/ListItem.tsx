@@ -1,10 +1,13 @@
 interface ListItemProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const ListItem = ({ children }: ListItemProps) => {
+const ListItem = ({ children, className = "" }: ListItemProps) => {
   return (
-    <li className="tracking-wide text-gray-800 text-lg text-2xl leading-relaxed list-decimal">
+    <li
+      className={`list-decimal text-lg leading-relaxed tracking-wide text-gray-800 ${className}`}
+    >
       {children}
     </li>
   );
