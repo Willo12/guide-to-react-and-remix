@@ -43,19 +43,13 @@ This project contains a number of activities and exercises designed to help you 
 
 The project itself is built from the Remix Indie stack, which comes pre-configured with a number of packages (see "What's in the Stack" below for further details) that make starting an app easier and quicker to get off the ground.
 
-Learn more about [Remix Stacks](https://remix.run/stacks).
+# Beginner React Challenges
 
 Each page of the project contains a different challenge:
 
 1. Counter
 2. Handling form input
 3. ToDo app
-
-## Getting Started with Create React App and Tailwind CSS
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-It also comes with a basic [Tailwind CSS](https://tailwindcss.com/) installation.
 
 ## The challenges
 
@@ -113,21 +107,13 @@ To learn React, check out the [React documentation](https://beta.reactjs.org/).
 
 For Tailwind, visit their [documentation page](https://tailwindcss.com/docs/installation).
 
-## What's in the stack
+### `npm run dev`
 
-- [Fly app deployment](https://fly.io) with [Docker](https://www.docker.com/)
-- Production-ready [SQLite Database](https://sqlite.org)
-- Healthcheck endpoint for [Fly backups region fallbacks](https://fly.io/docs/reference/configuration/#services-http_checks)
-- [GitHub Actions](https://github.com/features/actions) for deploy on merge to production and staging environments
-- Email/Password Authentication with [cookie-based sessions](https://remix.run/docs/en/v1/api/remix#createcookiesessionstorage)
-- Database ORM with [Prisma](https://prisma.io)
-- Styling with [Tailwind](https://tailwindcss.com/)
-- End-to-end testing with [Cypress](https://cypress.io)
-- Local third party request mocking with [MSW](https://mswjs.io)
-- Unit testing with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com)
-- Code formatting with [Prettier](https://prettier.io)
-- Linting with [ESLint](https://eslint.org)
-- Static Types with [TypeScript](https://typescriptlang.org)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
 ### Type Checking
 

@@ -4,10 +4,10 @@ import Paragraph from "~/components/Paragraph";
 
 const TodoApp = () => {
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl items-center justify-center">
-      <div className="m-8 rounded-xl bg-sky-100 p-20 shadow-xl">
+    <main className="mx-auto flex min-h-screen items-center justify-center">
+      <div className="m-16 w-256 rounded-xl bg-sky-100 p-20 shadow-xl">
         <h1 className="mb-8 text-center text-6xl font-bold text-blue-500">
-          Hello world!
+          ToDo App
         </h1>
         <Paragraph>
           Your task is to replace this content (found in{" "}
@@ -24,9 +24,9 @@ const TodoApp = () => {
           <em>might</em> look and behave, but feel free to put your own spin on
           the solution.
         </Paragraph>
-        <div>
+        <div className="flex justify-center">
           <img
-            className="mb-4 rounded-lg"
+            className="max-w-96 mb-4 rounded-lg"
             src="https://res.cloudinary.com/dptdx8zuv/image/upload/v1674474087/react-introduction/2023-01-23_11-37-47_1_n7lt3y.gif"
             alt="Finished ToDo app example"
           />
