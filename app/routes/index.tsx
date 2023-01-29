@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className="mb-0">
-        <h1 className="bold text-4xl text-4xl uppercase text-slate-700">
+        <h1 className="bold text-4xl uppercase text-slate-700">
           Select a Challenge
         </h1>
       </div>
