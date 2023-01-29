@@ -1,14 +1,11 @@
-import { Link } from "@remix-run/react";
 import ChallengeLink from "~/components/homepage/ChallengeLink";
 import { FaCalculator, FaKeyboard, FaCheckSquare } from "react-icons/fa";
-
-import { useOptionalUser } from "~/utils";
 
 export default function Index() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className="mb-12">
-        <h1 className="font-serif text-4xl text-4xl text-slate-700">
+      <div className="mb-0">
+        <h1 className="bold text-4xl text-4xl uppercase text-slate-700">
           Select a Challenge
         </h1>
       </div>
