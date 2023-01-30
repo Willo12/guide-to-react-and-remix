@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import HandleUserInputChallengeCode from "~/challenge-components/react/handle-user-input-challenge-code";
 import ExternalLink from "~/components/ExternalLink";
+import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";
 import ListItem from "~/components/ListItem";
 import MonoType from "~/components/MonoType";
@@ -44,15 +45,7 @@ const HandleUserInput = () => {
           />
         </div>
         <div className="flex justify-center py-8">
-          <div>
-            <Link
-              type="button"
-              className="rounded-lg bg-green-300 px-8 py-6 text-sm font-bold uppercase text-green-800 hover:bg-green-500"
-              to="/instructions/handle-user-input"
-            >
-              🚀 Extra Credit
-            </Link>
-          </div>
+          <ExtraCreditLink to="/instructions/handle-user-input" />
         </div>
       </div>
       <div className="lg:w-1/2">

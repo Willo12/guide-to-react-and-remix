@@ -1,4 +1,5 @@
 import { marked } from "marked";
+import InternalStyledLink from "~/components/InternalStyledLink";
 
 const html = marked(`
 # Handling User Input
@@ -21,6 +22,11 @@ Can you use the [usePrevious custom hook](https://usehooks.com/usePrevious/) to 
 const Counter = () => {
   return (
     <div className="container prose m-8 mx-auto text-2xl tracking-wide text-slate-600 sm:m-8 sm:mt-8 lg:mt-16">
+      <div className="mb-4">
+        <InternalStyledLink to="/handle-user-input">
+          {"<"} Back
+        </InternalStyledLink>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );

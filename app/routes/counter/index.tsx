@@ -1,4 +1,7 @@
 import CounterChallengeCode from "~/challenge-components/react/counter-challenge-code";
+import ExternalLink from "~/components/ExternalLink";
+import { ExtraCreditLink } from "~/components/ExtraCreditLink";
+import HintBox from "~/components/HintBox";
 import MonoType from "~/components/MonoType";
 import Paragraph from "~/components/Paragraph";
 
@@ -11,10 +14,35 @@ const Counter = () => {
         </h1>
         <MonoType path="app/challenge-components/counter-challenge-code.tsx" />
         <Paragraph>
-          Can you update the component code in the file above so that
-          clicking the 'Add' button makes the number increment by one every
-          time?
+          Can you update the code in the file above so that clicking the 'Add'
+          button makes the number increment by one every time?
         </Paragraph>
+        <div className="mt-4">
+          <HintBox>
+            <Paragraph className="mb-0 text-base text-emerald-700">
+              <span className="font-bold">Hint</span>: you can use the{" "}
+              <ExternalLink to="https://beta.reactjs.org/reference/react/useState#reference">
+                useState
+              </ExternalLink>{" "}
+              hook to solve this. Look at a usage example{" "}
+              <ExternalLink to="https://beta.reactjs.org/reference/react/useState#usage">
+                here
+              </ExternalLink>
+              .
+            </Paragraph>
+            <Paragraph className="mb-0 text-base text-emerald-700">
+              If you are REALLY stuck, take a look at a counter example from the
+              React docs page{" "}
+              <ExternalLink to="https://beta.reactjs.org/reference/react/useState#examples-basic">
+                here
+              </ExternalLink>
+              .
+            </Paragraph>
+          </HintBox>
+          <div className="flex justify-center py-8">
+            <ExtraCreditLink to="/instructions/counter" />
+          </div>
+        </div>
       </div>
       <div className="lg:w-1/2">
         <CounterChallengeCode />
