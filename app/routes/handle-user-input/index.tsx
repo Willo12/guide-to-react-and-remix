@@ -16,9 +16,9 @@ const HandleUserInput = () => {
         <MonoType path="app/challenge-components/react/handle-user-input-challenge-code.tsx" />
         <ol>
           <ListItem className="text-gray-600">
-            Update the code so that when the user types into the input field,
-            their writing replaces the three question marks in the green box
-            below.
+            Update the code in the file above so that when the user types into
+            the 'Message' input field, their writing replaces the three question
+            marks in the green box below it.
           </ListItem>
           <ListItem className="text-gray-600">
             When the user clicks the 'Clear Text' button, the text in the input

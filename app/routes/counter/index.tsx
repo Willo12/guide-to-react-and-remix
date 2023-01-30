@@ -11,7 +11,7 @@ const Counter = () => {
         </h1>
         <MonoType path="app/challenge-components/counter-challenge-code.tsx" />
         <Paragraph>
-          Can you update the component code at the location above so that
+          Can you update the component code in the file above so that
           clicking the 'Add' button makes the number increment by one every
           time?
         </Paragraph>
