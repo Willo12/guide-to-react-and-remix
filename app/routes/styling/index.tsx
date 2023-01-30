@@ -22,8 +22,10 @@ const Styling = () => {
             'Second', 'Third' and 'Fourth' (see below) are each placed into
             boxes with the following styles:
             <ul className="my-8">
-              <ListItem>Each box should be a different shade of green</ListItem>
-              <ListItem>Every box should have a dark green border</ListItem>
+              <ListItem>Each box should be a light shade of green</ListItem>
+              <ListItem>
+                Every box should have a dark green border and dark green text
+              </ListItem>
               <ListItem>Every box should be wider than the last</ListItem>
               <ListItem>Every box should have a height of 64px</ListItem>
               <ListItem>
@@ -44,7 +46,7 @@ const Styling = () => {
                   to learn how to apply classes in React.
                 </Paragraph>
               </div>
-              <Paragraph>
+              <Paragraph className="mb-0 text-base text-emerald-700">
                 For help with Tailwind class names, use the{" "}
                 <ExternalLink to="https://nerdcave.com/tailwind-cheat-sheet">
                   online cheatsheet
