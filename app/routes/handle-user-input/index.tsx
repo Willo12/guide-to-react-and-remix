@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import HandleUserInputChallengeCode from "~/challenge-components/react/handle-user-input-challenge-code";
 import ExternalLink from "~/components/ExternalLink";
 import { ExtraCreditLink } from "~/components/ExtraCreditLink";
