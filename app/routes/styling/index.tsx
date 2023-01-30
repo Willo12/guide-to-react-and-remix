@@ -54,6 +54,9 @@ const Styling = () => {
               </Paragraph>
             </HintBox>
           </div>
+          <div className="flex justify-center p-8">
+            <ExtraCreditLink to="/instructions/styling" />
+          </div>
         </div>
         <div className="flex w-1/2 items-center justify-center">
           <img src={stylingFinished} alt="Finished Challenge" />
