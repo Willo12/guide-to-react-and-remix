@@ -5,8 +5,8 @@ import Paragraph from "~/components/Paragraph";
 const TodoApp = () => {
   return (
     <main className="mx-auto flex min-h-screen items-center justify-center">
-      <div className="m-16 w-256 rounded-xl bg-sky-100 p-20 shadow-xl">
-        <h1 className="mb-8 text-center text-6xl font-bold text-blue-500">
+      <div className="m-4 w-256 rounded-xl bg-sky-100 p-8 shadow-xl lg:m-16 lg:p-20">
+        <h1 className="mb-8 text-center text-5xl font-bold text-blue-500 lg:text-6xl">
           ToDo App
         </h1>
         <Paragraph>
