@@ -1,4 +1,4 @@
-import HandleUserInputChallengeCode from "~/challenge-components/react/handle-user-input-challenge-code";
+import HandleUserInputChallengeCode from "~/challengeComponents/react/HandleUserInputChallengeCode";
 import ExternalLink from "~/components/ExternalLink";
 import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";

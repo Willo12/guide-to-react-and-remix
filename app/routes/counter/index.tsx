@@ -1,4 +1,4 @@
-import CounterChallengeCode from "~/challenge-components/react/counter-challenge-code";
+import CounterChallengeCode from "~/challengeComponents/react/CounterChallengeCode";
 import ExternalLink from "~/components/ExternalLink";
 import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";

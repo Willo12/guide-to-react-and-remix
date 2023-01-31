@@ -1,5 +1,5 @@
-import StylingChallengeCode from "~/challenge-components/react/styling-challenge-code";
-import HandleUserInputChallengeCode from "~/challenge-components/react/styling-challenge-code";
+import StylingChallengeCode from "~/challengeComponents/react/StylingChallengeCode";
+import HandleUserInputChallengeCode from "~/challengeComponents/react/StylingChallengeCode";
 import ExternalLink from "~/components/ExternalLink";
 import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";
