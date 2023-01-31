@@ -14,7 +14,7 @@ const HandleUserInput = () => {
           <h1 className="mb-8 text-center text-5xl font-bold text-blue-500 lg:text-6xl">
             Handling User Input
           </h1>
-          <MonoType path="app/challenge-components/react/handle-user-input-challenge-code.tsx" />
+          <MonoType path="app/challengeComponents/react/handleUserInputChallengeCode.tsx" />
           <ol>
             <ListItem className="text-gray-600">
               Update the code in the file above so that when the user types into
