@@ -12,7 +12,7 @@ const HandleUserInputChallengeCode = () => {
         />
         <button
           type="button"
-          className="absolute right-2 top-12 rounded-md bg-indigo-400 px-4 py-2 text-white"
+          className="absolute right-2 top-12 rounded-md bg-indigo-400 px-4 py-2 text-white hover:bg-indigo-600"
         >
           Clear Text
         </button>
