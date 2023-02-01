@@ -17,7 +17,7 @@ const YourFirstComponent = () => {
           <MonoType path="app/challengeComponents/react/YourFirstComponentChallengeCode.tsx" />
           <Paragraph>
             Update the code in the file above so that it prints out the words
-            using a single paragraph tag 'Hello World'.
+            'Hello World' using a single paragraph tag.
           </Paragraph>
           <Paragraph>
             You will know it has worked when the words appear in the empty white

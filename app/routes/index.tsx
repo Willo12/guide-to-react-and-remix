@@ -1,6 +1,12 @@
+import {
+  GiCalculator,
+  GiChecklist,
+  GiKeyboard,
+  GiPaintBrush,
+  GiToolbox,
+  GiAchievement,
+} from "react-icons/gi";
 import ChallengeLink from "~/components/homepage/ChallengeLink";
-import { FaCalculator, FaKeyboard, FaCheckSquare } from "react-icons/fa";
-import { GiPaintBrush, GiToolbox, GiCalculator } from "react-icons/gi";
 
 export default function Index() {
   return (
@@ -11,6 +17,20 @@ export default function Index() {
         </h1>
       </div>
       <div className="w-full p-8 lg:flex lg:max-w-5xl lg:flex-wrap">
+        <div className="p-8 lg:w-1/2">
+          <ChallengeLink to="/your-first-component">
+            <div className="flex flex-col items-center justify-center">
+              <GiAchievement
+                className="my-8 fill-orange-100 group-hover:fill-red-300"
+                size="12rem"
+              />
+              <h2 className="text-center text-2xl font-bold uppercase tracking-wide text-red-900 transition-all group-hover:text-red-300">
+                Your First Component
+              </h2>
+            </div>
+          </ChallengeLink>
+        </div>
+
         <div className="p-8 lg:w-1/2">
           <ChallengeLink to="/styling">
             <div className="flex flex-col items-center justify-center">
@@ -56,7 +76,7 @@ export default function Index() {
         <div className="p-8 lg:w-1/2">
           <ChallengeLink to="/handle-user-input">
             <div className="flex flex-col items-center justify-center">
-              <FaKeyboard
+              <GiKeyboard
                 className="my-8 fill-orange-100 group-hover:fill-red-300"
                 size="12rem"
               />
@@ -70,7 +90,7 @@ export default function Index() {
         <div className="p-8 lg:w-1/2">
           <ChallengeLink to="/todo-app">
             <div className="flex flex-col items-center justify-center">
-              <FaCheckSquare
+              <GiChecklist
                 className="my-8 fill-orange-100 group-hover:fill-red-300"
                 size="12rem"
               />
