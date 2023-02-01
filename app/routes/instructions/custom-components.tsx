@@ -6,7 +6,9 @@ const html = marked(`
 
 ### 🚀 **EXTRA CREDIT 1 (optional)**
 
-Can you add a second prop called \`className\` that will allow the coder to pass in their own custom classes?
+Can you add a second, optional prop called \`className\` that will allow the coder to pass in their own custom classes?
+
+Learn how to write optional props [here](https://dmitripavlutin.com/typescript-react-components/#23-optional-props)
 
 So this code...
 
@@ -16,7 +18,7 @@ Will render this output...
 
 ![Extra credit 1 finished example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1675183822/react-introduction/custom-component-extra-credit-render_epmhbs.png)
 
-This should be an optional prop, and if it is not passed then the component will simply use the original green styles.`);
+Remember - this should be an optional prop, and if it is not passed then the component will simply use the original green styles.`);
 
 const CustomComponents = () => {
   return (
