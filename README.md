@@ -2,7 +2,7 @@
 
 ## Quickstart
 
-### 1. Clone the project to your machine with the Git command line or an application like Github Desktop.
+### 1. Clone the project to your machine with [Github Desktop](https://desktop.github.com/) or the Git command line.
 
 > ⚠ Be sure to clone this somewhere _outside of OneDrive_, or any other area on your machine that will sync to the cloud.
 
@@ -24,11 +24,11 @@ npm run setup
 
 ### 3. Run the server
 
-````
- - Start the dev server
+- Start the dev server
+
 ```shell
-npm run setup
-````
+npm run dev
+```
 
 This starts your app in development mode, rebuilding assets on file changes.
 
@@ -41,71 +41,43 @@ Password: `racheliscool`
 
 This project contains a number of activities and exercises designed to help you get up and running with React and Remix. Remix is a framework that is currently built on top of React, but has a lot of functionality unique to it alone.
 
-The project itself is built from the Remix Indie stack, which comes pre-configured with a number of packages (see "What's in the Stack" below for further details) that make starting an app easier and quicker to get off the ground.
+The project itself is built from the Remix Indie stack, which comes pre-configured with a number of packages that make starting an app easier and quicker to get off the ground. See "What's in the Stack" below for further details of these.
 
-# Beginner React Challenges
+## Beginner React Challenges
 
-Each page of the project contains a different challenge:
+Each page of the project contains a different challenge. Currently, these are:
 
-1. Counter
-2. Handling form input
-3. ToDo app
+### Static components
 
-## The challenges
+1. Your First Compoenent
+2. Simple Styling
+3. Custom Components
 
-### 1. Counter
+### Handling State
 
-Can you update the component code so that clicking the 'Add' button makes the number on screen increment by one every time?
-
-**HINT**: you can use the (useState)[https://beta.reactjs.org/reference/react/useState#reference] hook to solve this. Look at a usage example (here)[https://beta.reactjs.org/reference/react/useState#usage].
-
-If you are REALLY stuck, take a look at a counter example from the React docs page (here)[https://beta.reactjs.org/reference/react/useState#examples-basic].
-
-### 2. Handling User Input
-
-1. Update the code so that when the user types into the input field, their writing will replace the three question marks in the green box below.
-
-2. When the user clicks the 'Clear Text' button, the text in the input box and the 'You typed:' area should clear.
-
-So the finished behaviour will look like this...
-
-![Finished input handling challenge](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674377447/react-introduction/2023-01-22_08-48-42_1_uxd5wg.gif)
-
-**HINT**: Take a look at the text field example (second tab along) from the React docs page (here)[https://beta.reactjs.org/reference/react/useState#examples-basic].
-
-#### **EXTRA CREDIT 1 (optional)**
-
-If the input box is empty, can you give it a red background-colour and print a message beneath reading 'This field is required', like that shown below?
-
-![Extra credit 1 finished example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674378802/react-introduction/2023-01-22_09-11-57_1_b78mv3.gif)
-
-#### **EXTRA CREDIT 2 (optional)**
-
-Hmmm. Now, the input field is already styled red with a warning when the component first renders and before the user has even typed anything.
-
-Can you use the [usePrevious custom hook](https://usehooks.com/usePrevious/) to only make the warning styles show _AFTER_ the user has typed into the input field and then cleared it? See the example below:
-
-![Extra credit 2 finished example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674377447/react-introduction/2023-01-22_08-48-42_1_uxd5wg.gif)
-
-### 3. ToDo List Challenge
-
-This will bring all of your knowledge together. Create a ToDo list app that will allow the user to:
-
-1. Create a ToDo
-2. Delete a ToDo
-3. Extension (optional): Edit a Todo
-
-Take a look at the example below to get an idea of what it might look like, but don't feel like you have to copy it exactly. Make it your own!
-
-![Finish ToDo app example](https://res.cloudinary.com/dptdx8zuv/image/upload/v1674474087/react-introduction/2023-01-23_11-37-47_1_n7lt3y.gif)
+4. Counter
+5. Handling form input
+6. ToDo app
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React
 
-To learn React, check out the [React documentation](https://beta.reactjs.org/).
+1. Check out the [React documentation](https://beta.reactjs.org/)
+2. Excellent free course by Kent C. Dodd over on [Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-react)
+3. An equally excellent free course on [Scrimba](https://scrimba.com/learn/learnreact)
 
-For Tailwind, visit their [documentation page](https://tailwindcss.com/docs/installation).
+### Tailwind
+
+1. Visit the Tailwind [documentation page](https://tailwindcss.com/docs/installation)
+2. Take the free Tailwind course on [Scrimba](https://scrimba.com/playlist/pdq3QsM)
+
+### Remix
+
+1. Complete the quickstart guide on the [Remix website](https://remix.run/docs/en/v1/tutorials/blog)
+2. Work through Kent C. Dodd's accompanying free [Egghead.io](https://rmx.as/egghead-course) course for the quickstart guide above
+3. For a deeper dive into Remix, work through their longer [Remix Jokes App](https://remix.run/docs/en/v1/tutorials/jokes) tutorial
+4. Watch the accompanying screencast to the deep dive tutorial [here](https://www.youtube.com/watch?v=hsIWJpuxNj0)
 
 ### `npm run dev`
 
