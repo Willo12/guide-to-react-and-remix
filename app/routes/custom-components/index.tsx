@@ -5,6 +5,7 @@ import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";
 import MonoType from "~/components/MonoType";
 import Paragraph from "~/components/Paragraph";
+import Snippet from "~/components/Snippet";
 
 const CustomComponents = () => {
   return (
@@ -51,10 +52,8 @@ const CustomComponents = () => {
             </div>
             <Paragraph className="text-base">
               Your custom component should accept a single prop -{" "}
-              <code className="rounded bg-slate-900 px-2 py-1 font-mono text-base text-white">
-                name
-              </code>{" "}
-              - that is interpolated into the final output.
+              <Snippet>name</Snippet> - that is interpolated into the final
+              output.
             </Paragraph>
             <HintBox>
               <Paragraph className="mb-0 text-base text-emerald-700">

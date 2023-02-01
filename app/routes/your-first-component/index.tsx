@@ -5,6 +5,7 @@ import { ExtraCreditLink } from "~/components/ExtraCreditLink";
 import HintBox from "~/components/HintBox";
 import MonoType from "~/components/MonoType";
 import Paragraph from "~/components/Paragraph";
+import Snippet from "~/components/Snippet";
 
 const YourFirstComponent = () => {
   return (
@@ -24,8 +25,8 @@ const YourFirstComponent = () => {
             box opposite.
           </Paragraph>
           <Paragraph>
-            The paragraph tag should be nested in between the div tags that are
-            already there.
+            The paragraph tag should be nested in between the{" "}
+            <Snippet>div</Snippet> tags that are already there.
           </Paragraph>
           <div className="p-4">
             <div className="flex flex-col items-center">
