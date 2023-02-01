@@ -12,7 +12,7 @@ const CounterChallengeCode = () => {
           </h2>
         </div>
         <div className="mt-10 flex justify-center">
-          <button className="rounded-lg bg-indigo-700 px-12 py-6 text-2xl text-white">
+          <button className="m-2 rounded-lg bg-indigo-700 px-12 py-6 text-2xl text-white transition-colors hover:bg-indigo-600">
             Add
           </button>
         </div>

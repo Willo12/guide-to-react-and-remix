@@ -12,7 +12,7 @@ const Counter = () => {
         <h1 className="mb-8 text-center text-6xl font-bold text-blue-500">
           Counter
         </h1>
-        <MonoType path="app/challengeComponents/counterChallengeCode.tsx" />
+        <MonoType path="app/challengeComponents/CounterChallengeCode.tsx" />
         <Paragraph>
           Can you update the code in the file above so that clicking the 'Add'
           button makes the number increment by one every time?
