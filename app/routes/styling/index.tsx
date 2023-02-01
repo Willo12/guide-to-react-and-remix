@@ -15,13 +15,13 @@ const Styling = () => {
           <h1 className="mb-8 text-center text-5xl font-bold text-blue-500 lg:text-6xl">
             Styling
           </h1>
-          <MonoType path="app/challengeComponents/react/stylingChallengeCode.tsx" />
+          <MonoType path="app/challengeComponents/react/StylingChallengeCode.tsx" />
           <Paragraph>
             Update the code in the file above so that the words 'First',
             'Second', 'Third' and 'Fourth', shown opposite, are each placed into
             boxes with the following styles:
             <div className="flex">
-              <ul className="my-8">
+              <ul className="my-8 w-1/2">
                 <ListItem>Each box should be a light shade of green</ListItem>
                 <ListItem>
                   Every box should have a dark green border and dark green text
@@ -32,7 +32,7 @@ const Styling = () => {
                   There should be a gap (margin) of 8px around every box
                 </ListItem>
               </ul>
-              <div className="flex w-1/2 items-center justify-center">
+              <div className="flex  w-1/2 items-center justify-center">
                 <img
                   className="h-64 w-auto border-4 border-gray-300"
                   src={stylingFinished}
