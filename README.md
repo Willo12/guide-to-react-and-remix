@@ -22,6 +22,12 @@ npx remix init
 npm run setup
 ```
 
+- Install dependencies
+
+```shell
+npm install
+```
+
 ### 3. Run the server
 
 - Start the dev server
