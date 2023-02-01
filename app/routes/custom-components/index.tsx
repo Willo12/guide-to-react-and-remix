@@ -15,7 +15,7 @@ const CustomComponents = () => {
           <h1 className="mb-8 text-center text-5xl font-bold text-blue-500 lg:text-6xl">
             Custom Components
           </h1>
-          <MonoType path="app/challengeComponents/react/customComponentsChallengeCode.tsx" />
+          <MonoType path="app/challengeComponents/react/CustomComponentsChallengeCode.tsx" />
 
           <div className="mt-4">
             <Paragraph className="text-base">
@@ -63,6 +63,13 @@ const CustomComponents = () => {
                   here
                 </ExternalLink>{" "}
                 to learn how to create custom components.
+              </Paragraph>
+              <Paragraph className="mb-0 text-base text-emerald-700">
+                <span className="font-bold">Hint</span>: Learn how to type
+                component props{" "}
+                <ExternalLink to="https://dmitripavlutin.com/typescript-react-components/#2-typing-props">
+                  here.
+                </ExternalLink>
               </Paragraph>
             </HintBox>
             <div className="flex justify-center pt-8">
