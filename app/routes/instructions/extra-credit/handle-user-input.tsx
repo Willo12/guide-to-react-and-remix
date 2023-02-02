@@ -24,7 +24,7 @@ const Counter = () => {
     <div className="container prose m-8 mx-auto text-2xl tracking-wide text-slate-600 sm:m-8 sm:mt-8 lg:mt-16">
       <div className="mb-4">
         <InternalStyledLink to="/handle-user-input">
-          {"<"} Back
+          {"<"} Back to challenge page
         </InternalStyledLink>
       </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />

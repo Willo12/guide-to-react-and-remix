@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import { marked } from "marked";
 import InternalStyledLink from "~/components/InternalStyledLink";
 
@@ -18,7 +17,9 @@ const Counter = () => {
   return (
     <div className="prose m-8 mx-auto sm:m-8 lg:mt-16">
       <div className="mb-4">
-        <InternalStyledLink to="/counter">{"<"} Back</InternalStyledLink>
+        <InternalStyledLink to="/counter">
+          {"<"} Back to challenge page
+        </InternalStyledLink>
       </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>

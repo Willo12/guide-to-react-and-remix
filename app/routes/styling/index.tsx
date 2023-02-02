@@ -63,10 +63,10 @@ const Styling = () => {
             </HintBox>
           </div>
           <div className="flex justify-center p-8">
-            <ExtraCreditLink to="/instructions/styling" />
+            <ExtraCreditLink to="/instructions/extra-credit/styling" />
           </div>
         </div>
-        <div className="flex w-full items-center justify-center p-10">
+        <div className="flex w-full items-center justify-center p-10 lg:w-1/2">
           <div className="border-4 border-gray-300 bg-white p-10">
             <StylingChallengeCode />
           </div>

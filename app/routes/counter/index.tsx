@@ -40,7 +40,7 @@ const Counter = () => {
             </Paragraph>
           </HintBox>
           <div className="flex justify-center py-8">
-            <ExtraCreditLink to="/instructions/counter" />
+            <ExtraCreditLink to="/instructions/extra-credit/counter" />
           </div>
         </div>
       </div>

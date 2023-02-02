@@ -47,7 +47,7 @@ const HandleUserInput = () => {
               alt="Finished Handle User Input Challenge"
             />
             <div className="flex justify-center py-4">
-              <ExtraCreditLink to="/instructions/handle-user-input" />
+              <ExtraCreditLink to="/instructions/extra-credit/handle-user-input" />
             </div>
           </div>
         </div>

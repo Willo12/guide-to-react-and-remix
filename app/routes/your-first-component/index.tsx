@@ -53,7 +53,7 @@ const YourFirstComponent = () => {
             </HintBox>
           </div>
           <div className="flex justify-center p-8">
-            <ExtraCreditLink to="/instructions/your-first-component" />
+            <ExtraCreditLink to="/instructions/extra-credit/your-first-component" />
           </div>
         </div>
         <div className="flex w-full items-center justify-center p-10 lg:w-1/3">

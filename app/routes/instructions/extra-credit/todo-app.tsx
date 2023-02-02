@@ -1,4 +1,5 @@
 import { marked } from "marked";
+import InternalStyledLink from "~/components/InternalStyledLink";
 
 const html = marked(`
 # ToDo App Challenge
@@ -25,6 +26,11 @@ For Tailwind, visit their [documentation page](https://tailwindcss.com/docs/inst
 const Counter = () => {
   return (
     <div className="container prose m-8 mx-auto sm:m-8 sm:mt-8 lg:mt-16">
+      <div className="mb-4">
+        <InternalStyledLink to="/todo-app">
+          {"<"} Back to challenge page
+        </InternalStyledLink>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );

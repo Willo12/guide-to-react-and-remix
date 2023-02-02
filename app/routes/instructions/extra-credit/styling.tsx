@@ -23,7 +23,9 @@ const Styling = () => {
   return (
     <div className="container prose m-8 mx-auto text-2xl tracking-wide text-slate-600 sm:m-8 sm:mt-8 lg:mt-16 lg:pb-8">
       <div className="mb-4">
-        <InternalStyledLink to="/styling">{"<"} Back</InternalStyledLink>
+        <InternalStyledLink to="/styling">
+          {"<"} Back to challenge page
+        </InternalStyledLink>
       </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>

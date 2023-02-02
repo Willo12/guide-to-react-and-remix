@@ -73,7 +73,7 @@ const CustomComponents = () => {
               </Paragraph>
             </HintBox>
             <div className="flex justify-center pt-8">
-              <ExtraCreditLink to="/instructions/custom-components" />
+              <ExtraCreditLink to="/instructions/extra-credit/custom-components" />
             </div>
           </div>
         </div>
