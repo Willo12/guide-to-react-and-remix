@@ -12,20 +12,16 @@
 
 - Initialise the project:
 
+- Install dependencies
+
 ```shell
-npx remix init
+npm install
 ```
 
 - Initial setup:
 
 ```shell
 npm run setup
-```
-
-- Install dependencies
-
-```shell
-npm install
 ```
 
 ### 3. Run the server
