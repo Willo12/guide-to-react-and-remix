@@ -10,8 +10,6 @@
 
 > Note that these two commands will only need running the first time after cloning the responsitory.
 
-- Initialise the project:
-
 - Install dependencies
 
 ```shell
