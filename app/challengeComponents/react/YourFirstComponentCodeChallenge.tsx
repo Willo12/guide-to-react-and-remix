@@ -1,7 +1,14 @@
 const YourFirstComponentCodeChallenge = () => {
   return (
     <>
-      <div>{/* 🧨 DELETE this line and replace with your own code 🧨 */}</div>
+      <div>
+        {
+          <p>
+            {" "}
+            <em>Hello World</em>{" "}
+          </p>
+        }
+      </div>
     </>
   );
 };
