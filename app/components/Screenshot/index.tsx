@@ -14,7 +14,7 @@ interface ImageModalProps {
 const ImageModal = ({ alt, handleCloseModal, src }: ImageModalProps) => {
   return (
     <div
-      className="fixed top-0 left-0 flex h-screen w-screen cursor-pointer items-center justify-center bg-neutral-500 bg-opacity-90"
+      className="fixed top-0 left-0 z-50 flex h-screen w-screen cursor-pointer items-center justify-center bg-neutral-500 bg-opacity-90"
       onClick={handleCloseModal}
     >
       <div className="flex h-auto max-w-full items-center justify-center p-4">

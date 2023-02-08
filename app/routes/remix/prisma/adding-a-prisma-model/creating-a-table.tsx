@@ -1,24 +1,13 @@
-import allModelsScreen from "~/assets/prisma-studio-all-models.png";
-import tableViewScreen from "~/assets/prisma-studio-table-view.png";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import {
+  newMemberShipSnippet,
+  updatedUserModelSnippet,
+} from "~/assets/codeSnippets/addingAModel/prismaSchemaSnippets";
 import CodeBlock from "~/components/CodeBlock";
 import Heading from "~/components/Heading";
 import InlineMonoType from "~/components/InlineMonoType";
 import InternalStyledLink from "~/components/InternalStyledLink";
 import Paragraph from "~/components/Paragraph";
-import Screenshot from "~/components/Screenshot";
-
-const newMemberShipSnippet = `model Membership {
-  id          String @id @default(cuid())
-  level       String
-  description String
-  price       String
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String @unique
-}`;
 
 const CreatingATable = () => {
   return (
@@ -27,7 +16,7 @@ const CreatingATable = () => {
         Creating a table
       </Heading>
       <Paragraph darkMode>
-        To add a new table to the database called{" "}
+        To add a new table called{" "}
         <InlineMonoType darkMode>Membership</InlineMonoType>, add the code below
         to the end of{" "}
         <InlineMonoType darkMode>prisma/schema.prisma</InlineMonoType>:
@@ -41,48 +30,44 @@ const CreatingATable = () => {
         />
       </div>
       <Paragraph darkMode>
+        We will also need to update the{" "}
+        <InlineMonoType darkMode>User</InlineMonoType> model towards the top of
+        the file on line 10. Replace your existing{" "}
+        <InlineMonoType darkMode>User</InlineMonoType> model code with that
+        shown below:
+      </Paragraph>
+      <div className="my-6">
+        <CodeBlock
+          filePath="prisma/schema.prisma"
+          language="prisma"
+          showLineNumbers={true}
+          snippet={updatedUserModelSnippet}
+        />
+      </div>
+      <Paragraph darkMode>
+        This defines a two-way relationship: a{" "}
+        <InlineMonoType darkMode>User</InlineMonoType> can optionally have one{" "}
+        <InlineMonoType darkMode>Membership</InlineMonoType>, and a{" "}
+        <InlineMonoType darkMode>Membership</InlineMonoType> can be associated
+        with many <InlineMonoType darkMode>Users</InlineMonoType>.
+      </Paragraph>
+      <Paragraph darkMode>
         Once pasted into your schema file, run the following command in your
         terminal push your changes to the database:
       </Paragraph>
       <div className="my-6">
         <CodeBlock language="shell" snippet="npx prisma db push" />
       </div>
-      <Paragraph darkMode>
-        You can see any changes made to your database by running the following
-        terminal command:
-      </Paragraph>
-      <div className="my-6">
-        <CodeBlock language="shell" snippet="npx prisma studio" />
-      </div>
-      <Paragraph darkMode>
-        This will open the screen below in your browser showing all the tables -
-        or models - in your database:
-      </Paragraph>
-      <div className="my-6">
-        <Screenshot
-          src={allModelsScreen}
-          alt="Prisma Studio all models screen"
-        />
-      </div>
-      <Paragraph darkMode>
-        Click on one of the model names and you will be taken to the view for
-        that particular database table/model. In the example below, we can see
-        the fields of the <InlineMonoType darkMode>Membership</InlineMonoType>{" "}
-        model displayed horizontally, but there are no records added yet.
-      </Paragraph>
-      <div className="my-6">
-        <Screenshot src={tableViewScreen} alt="Prisma Studio table view" />
-      </div>
-      <Paragraph darkMode>
-        Let's fix this in the{" "}
+      <div className="mt-12 mb-6">
         <InternalStyledLink
-          to="/remix/prisma/adding-a-prisma-model/seeding-data"
-          className="text-2xl"
+          to="/remix/prisma/adding-a-prisma-model/view-the-database"
+          className="group flex items-center justify-end text-2xl"
+          darkMode
         >
-          next step
-        </InternalStyledLink>{" "}
-        by adding some seed data.
-      </Paragraph>
+          Next: View the database{" "}
+          <FaArrowAltCircleRight className="ml-4 fill-blue-500 group-hover:fill-blue-400" />
+        </InternalStyledLink>
+      </div>
     </div>
   );
 };
