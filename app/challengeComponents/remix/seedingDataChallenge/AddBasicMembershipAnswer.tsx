@@ -1,18 +1,18 @@
+import { useState } from "react";
+import newMemberShipRecord from "~/assets/basicMembershipRecord.png";
 import { basicMembershipSeedSnippet } from "~/assets/codeSnippets/addingAModel/seedingDataSnippets";
+import ChallengeBlock from "~/components/ChallengeBlock";
 import CodeBlock from "~/components/CodeBlock";
 import Heading from "~/components/Heading";
 import InlineMonoType from "~/components/InlineMonoType";
 import ListItem from "~/components/ListItem";
 import Paragraph from "~/components/Paragraph";
-import Screenshot from "~/components/Screenshot";
-import newMemberShipRecord from "~/assets/basicMembershipRecord.png";
-import { useState } from "react";
 import RevealAnswerButton from "~/components/RevealAnswerButton";
-import AddAllMembershipsAnswerLong from "./AddAllMembershipsAnswerLong";
-import ChallengeBlock from "~/components/ChallengeBlock";
+import Screenshot from "~/components/Screenshot";
+import AddAllMembershipsAnswer from "./AddAllMembershipsAnswer";
 
 const AddBasicMembershipAnswer = () => {
-  const [isShowingAnswer, setIsShowingAnswer] = useState(false);
+  const [isShowingAnswer, setIsShowingAnswer] = useState(true);
 
   const handleShowAllMembershipsAnswer = () => {
     setIsShowingAnswer(true);
@@ -22,9 +22,9 @@ const AddBasicMembershipAnswer = () => {
     <>
       <Heading level="h2">Membership seed solution</Heading>
       <Paragraph darkMode>
-        Add the code below to the bottom of the{" "}
-        <InlineMonoType darkMode>seed</InlineMonoType> function, just above the
-        final <InlineMonoType darkMode>console.log</InlineMonoType> statement.
+        Add the code below to the top of the{" "}
+        <InlineMonoType darkMode>seed()</InlineMonoType> function in the file at{" "}
+        <InlineMonoType darkMode>prisma/seed.ts</InlineMonoType>:
       </Paragraph>
       <div className="my-6">
         <CodeBlock
@@ -74,7 +74,7 @@ const AddBasicMembershipAnswer = () => {
         <RevealAnswerButton onClick={handleShowAllMembershipsAnswer} />
       ) : null}
 
-      {isShowingAnswer ? <AddAllMembershipsAnswerLong /> : null}
+      {isShowingAnswer ? <AddAllMembershipsAnswer /> : null}
     </>
   );
 };

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {
-  createUserSnippet,
   creatingUserAttributesSnippet,
-  prismaCreateSnippet,
+  originalCreateUserSnippetComplete,
+  originalPrismaCreateUserSnippet,
 } from "~/assets/codeSnippets/addingAModel/seedingDataSnippets";
 import userDataScreenshot from "~/assets/prisma-studio-user-data.png";
 import CodeBlock from "~/components/CodeBlock";
@@ -47,7 +47,7 @@ const SeedingData = () => {
       </Paragraph>
       <div className="my-6">
         <CodeBlock
-          snippet={createUserSnippet}
+          snippet={originalCreateUserSnippetComplete}
           showLineNumbers
           filePath="prisma/seed.ts"
         />
@@ -104,7 +104,7 @@ const SeedingData = () => {
           </Paragraph>
           <div className="my-6">
             <CodeBlock
-              snippet={prismaCreateSnippet}
+              snippet={originalPrismaCreateUserSnippet}
               showLineNumbers
               filePath="prisma/seed.ts"
             />
