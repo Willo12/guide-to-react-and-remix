@@ -1,3 +1,4 @@
+import { log } from "console";
 import styles from "node_modules/react-syntax-highlighter/dist/cjs/styles/hljs/stackoverflow-dark.js";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -9,6 +10,8 @@ interface CodeBlockProps {
   language?: string;
   showLineNumbers?: boolean;
   snippet: string;
+  highlightAdditionalLines?: number[];
+  highlightSubtractedLines?: number[];
 }
 
 const CodeBlock = ({
@@ -16,6 +19,8 @@ const CodeBlock = ({
   language = "javascript",
   showLineNumbers,
   snippet,
+  highlightAdditionalLines,
+  highlightSubtractedLines,
 }: CodeBlockProps) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -64,7 +69,35 @@ const CodeBlock = ({
       <SyntaxHighlighter
         language={language}
         showLineNumbers={showLineNumbers}
+        wrapLines={true}
         style={styles}
+        lineProps={(lineNumber: number): React.HTMLProps<HTMLElement> => {
+          const style: React.CSSProperties = {
+            display: "block",
+            width: "100%",
+          };
+
+          if (highlightAdditionalLines && highlightAdditionalLines.length > 0) {
+            highlightAdditionalLines.forEach((highlightLineNumber) => {
+              if (highlightLineNumber === lineNumber) {
+                style.backgroundColor = "rgba(6, 78, 59, 0.5)";
+              }
+
+              return { style };
+            });
+          }
+          if (highlightSubtractedLines && highlightSubtractedLines.length > 0) {
+            highlightSubtractedLines.forEach((highlightLineNumber) => {
+              if (highlightLineNumber === lineNumber) {
+                style.backgroundColor = "rgba(127, 29, 29, 0.5)";
+              }
+
+              return { style };
+            });
+          }
+
+          return { style };
+        }}
       >
         {snippet}
       </SyntaxHighlighter>
