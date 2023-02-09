@@ -1,4 +1,4 @@
-export const createUserSnippet = `import { PrismaClient } from "@prisma/client";
+export const originalCreateUserSnippetComplete = `import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
@@ -52,7 +52,7 @@ export const creatingUserAttributesSnippet = `async function seed() {
   // [...]
 }`;
 
-export const prismaCreateSnippet = `const user = await prisma.user.create({
+export const originalPrismaCreateUserSnippet = `const user = await prisma.user.create({
   data: {
     email,
     password: {
@@ -64,9 +64,6 @@ export const prismaCreateSnippet = `const user = await prisma.user.create({
 });`;
 
 export const basicMembershipSeedSnippet = `async function seed() {
-  // [...I've cut some code out of the snippet here...]
-  // [...but keep it in your original...]
-
   const basicMembership: Pick<Membership, "level" | "description" | "price"> = {
     level: "Basic",
     description: "1 martial art - 2 sessions per week. Monthly fee.",
@@ -87,6 +84,9 @@ export const basicMembershipSeedSnippet = `async function seed() {
       price: basicMembership.price,
     },
   });
+
+  // [...I've cut some code out here...]
+  // [...but keep it in your original...]
 
   console.log(\`Database has been seeded. 🌱\`);
 }`;
@@ -224,8 +224,6 @@ export const allMembershipsLoopSnippet = `allMemberships.forEach(async (membersh
 });`;
 
 export const allMembershipsSeedFinal = `async function seed() {
-  // [...]
-
   const allMemberships: Pick<Membership, "level" | "description" | "price">[] =
     [
       {
@@ -271,5 +269,77 @@ export const allMembershipsSeedFinal = `async function seed() {
     });
   });
 
+  [...]
+
   console.log(\`Database has been seeded. 🌱\`);
 }`;
+
+export const originalCreateUsersAndNotesSnippet = `const hashedPassword = await bcrypt.hash("racheliscool", 10);
+
+const user = await prisma.user.create({
+  data: {
+    email,
+    password: {
+      create: {
+        hash: hashedPassword,
+      },
+    },
+  },
+});
+
+await prisma.note.create({
+  data: {
+    title: "My first note",
+    body: "Hello, world!",
+    userId: user.id,
+  },
+});
+
+await prisma.note.create({
+  data: {
+    title: "My second note",
+    body: "Hello, world!",
+    userId: user.id,
+  },
+});`;
+
+export const basicMembershipSeed = `const basicMembership = await prisma.membership.create({
+  data: {
+    level: "Basic",
+    description: "1 martial art - 2 sessions per week. Monthly fee.",
+    price: "£25.00",
+  },
+});`;
+
+export const createUserWithBasicMembershipSnippet = `const user = await prisma.user.create({
+  data: {
+    email,
+    password: {
+      create: {
+        hash: hashedPassword,
+      },
+    },
+    membershipId: basicMembership.id,
+  },
+});`;
+
+export const createIntermediateUserMemberSnippet = `const intermediateMemberEmail = "intermediateMember@email.com";
+
+// cleanup the existing database
+await prisma.user
+  .delete({ where: { email: intermediateMemberEmail } })
+  .catch(() => {
+    // no worries if it doesn't exist yet
+  });
+
+await prisma.user.create({
+  data: {
+    email: intermediateMemberEmail,
+    password: {
+      create: {
+        hash: hashedPassword,
+      },
+    },
+    membershipId: intermediateMembership.id,
+  },
+});`;
