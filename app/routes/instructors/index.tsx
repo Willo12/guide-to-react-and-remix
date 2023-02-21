@@ -47,11 +47,11 @@ const InstructorElement = ({
           <div className="mt-6 ml-3 text-2xl font-bold text-green-700">
             <h1 className="font-serif">{price} per Session</h1>
           </div>
-          <div className="mt-6 flex h-16 w-64 items-center justify-center lg:h-full lg:w-full">
+          <div className="mt-6 flex h-16 w-64 items-center justify-center lg:h-56 lg:w-full">
             <button
               className="mb-1 flex h-9 w-56 items-center justify-center rounded-sm
             bg-green-700 text-white transition-all last-of-type:mb-0 hover:scale-105
-            hover:cursor-pointer hover:bg-green-900 lg:h-20 lg:w-96"
+            hover:cursor-pointer hover:bg-green-900 lg:h-16 lg:w-96"
             >
               🛒Manage Membership
             </button>
@@ -64,26 +64,33 @@ const InstructorElement = ({
 
 function Instructors() {
   return (
-    <div
-      className="grid border-spacing-10 items-center
-     justify-center gap-2 gap-x-96 bg-gray-400
-    lg:flex lg:space-x-20"
-    >
-      <InstructorElement
-        fName="Jo"
-        lName="Michaels"
-        description={firstDescription}
-        price="£45"
-        image={firstInstructor}
-      />
-      <InstructorElement
-        fName="Michelle"
-        lName="Yung"
-        price="£75"
-        description={secondDescription}
-        image={secondInstructor}
-      />
-    </div>
+    <body className="bg-gray-400">
+      <div className=" flex items-center justify-center">
+        <h1 className=" mt-4 text-4xl font-semibold md:text-9xl">
+          Meet the Instructors
+        </h1>
+      </div>
+      <div
+        className="grid border-spacing-10
+      items-center justify-center gap-2 gap-x-96
+       lg:flex lg:space-x-20"
+      >
+        <InstructorElement
+          fName="Jo"
+          lName="Michaels"
+          description={firstDescription}
+          price="£45"
+          image={firstInstructor}
+        />
+        <InstructorElement
+          fName="Michelle"
+          lName="Yung"
+          price="£75"
+          description={secondDescription}
+          image={secondInstructor}
+        />
+      </div>
+    </body>
   );
 }
 
